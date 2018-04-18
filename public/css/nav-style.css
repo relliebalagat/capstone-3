@@ -1,0 +1,11 @@
+.navbar-default {
+    background-image: linear-gradient(-45deg, #B7F8DB 0%, #50A7C2 100%);
+}
+
+.navbar-default .navbar-header .navbar-brand {
+    color: #B7F8DB;
+}
+
+.navbar-default .navbar-nav > li.dropdown > a {
+    color: #50A7C2;
+}

@@ -1,0 +1,101 @@
+.content-header {
+    width: 100%;
+}
+
+.content-header img,
+.users img {
+    border-radius: 50%;
+}
+
+.content-header img {
+    height: 170px;
+}
+
+.content-header .col-md-9 {
+    padding-left: 20px;
+}
+
+.breadcrumb {
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    padding-bottom: -30px;
+    border: 1px solid #d3e0e9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.breadcrumb > li+li:before {
+    content: "|\A0";
+    padding: 0 25px;
+}
+
+.statistics li > span,
+.profile-buttons,
+.question-date,
+.dropdown-position {
+    float: right;
+}
+
+.users h5,
+.users h6 {
+    text-align: center;
+}
+
+/*.users img {
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}*/
+
+.users p {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.users a:hover {
+    text-decoration: none;
+    color: #50A7C2;
+}
+
+.config-button {
+    float: right;
+    font-size: 1.5em;
+}
+
+.profile-logo {
+    padding: 0 10px;
+    font-size: 1.2em;
+}
+
+.upload-btn {
+    margin-top: 10px;
+    position: relative;
+    bottom: 35px;
+    width: 170px;
+}
+
+.question-btn {
+    margin-left: 10px;
+}
+
+.profile-buttons {
+    margin-top:33px;
+}
+
+ul.dropdown-menu a > span {
+    padding-right: 8px;
+}
+
+.dropdown-menu {
+    min-width: 110px;
+    left: -90px;
+}
+
+.edit-profile-avatar {
+    border-radius: 25%;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 75vh;
+}

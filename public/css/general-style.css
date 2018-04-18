@@ -1,0 +1,115 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+input[type*="text"], input[type*="email"],
+input[type*="password"] {
+    padding: 20px;
+}
+
+input[type*="text"]:focus,
+input[type*="email"]:focus,
+input[type*="password"]:focus,
+textarea:focus {
+    border-color: #50A7C2;
+}
+
+.short-text {
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+}
+
+.body-height {
+    height: 102vh;
+}
+
+.curve-edge {
+    border-radius: 100px;
+    box-shadow: none;
+}
+
+.main-button {
+    background-color: #50A7C2;
+    border-color: #50A7C2;
+}
+
+.main-button:hover, .gradient-bg-color {
+	background-image: linear-gradient(-150deg, #B7F8DB 0%, #50A7C2 100%);
+}
+
+.main-button:hover {
+    color: white;
+}
+
+.panel-body {
+	padding: 15px 0 0 0;
+}
+
+.display-block {
+    display: block;
+}
+
+.panel {
+    border-radius: 15px;
+}
+
+.users h5,
+.users h6 {
+    text-align: center;
+}
+
+/*.users img {
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}*/
+
+.users p {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.users a:hover,
+.tags a:hover {
+    text-decoration: none;
+    color: #50A7C2;
+}
+
+select[name*="category"] {
+    margin-bottom: 15px;
+}
+
+.statistics {
+    list-style-type: none;
+    padding: 0 20px;
+}
+
+.statistics li {
+    padding-bottom: 5px;
+}
+.statistics li > span {
+    float: right;
+}
+
+.side-bar-profile-img, 
+.answer-profile-img,
+.question-profile-img,
+.follower-profile-img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.question-profile-img {
+    height: 105px;
+    width: 105px;
+}
+
+.follower-profile-img {
+    width: 25%;
+    height: 25%;
+}
