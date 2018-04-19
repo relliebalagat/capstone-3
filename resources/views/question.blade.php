@@ -35,10 +35,10 @@
                             <p>{{ $question->created_at->diffForHumans() }}</p>
                             @if($question->upvote == 0)
                                 <button class="btn btn-default" id="upvote-question-{{ $question->id }}"><span class="btn-text"><i class="fas fa-chevron-circle-up"></i></span><span id="upvote-count"></span> Upvote</button>
-                                <button class="btn btn-default"><span class="btn-text"><i class="fas fa-chevron-circle-down"></i></span>Downvote</button>
+                                <button class="btn btn-default" id="downvote-question-{{ $question->id }}"><span class="btn-text"><i class="fas fa-chevron-circle-down"></i><span id="upvote-count"></span></span> Downvote</button>
                             @else
                                 <button class="btn btn-default" id="upvote-question-{{ $question->id }}"><span class="btn-text"><i class="fas fa-chevron-circle-up"></i></span><span id="upvote-count">{{ $question->upvote }}</span> Upvote</button>
-                                <button class="btn btn-default"><span class="btn-text"><i class="fas fa-chevron-circle-down"></i></span> {{ $question->downvote }} Downvote</button>
+                                <button class="btn btn-default" id="downvote-question-{{ $question->id }}"><span class="btn-text"><i class="fas fa-chevron-circle-down"></i></span><span id="downvote-count">{{ $question->downvote }}</span> Downvote</button>
                             @endif
 
                             @if(count($question->answer) > 0)
@@ -176,11 +176,29 @@
                   _token: "{{ csrf_token() }}" },
                 function(data, status) {
                     console.log(data.upvote);
-                    $('#upvote-count').text('');
-                    $('#upvote-count').text( data.upvote );
+                    // $('#upvote-count').text('');
+                    // $('#upvote-count').text( data.upvote );
                 });
         });
 
+        $('#downvote-question-{{$question->id}}').click(function(){
+            var count = $('#downvote-count').val();
+            if(count === ""){
+                count = 0;
+            }
+            var questionId = {{ $question->id }};
+            var userId = {{ Auth::user()->id }};
+            $.post('/question/downvote' ,
+                { count: count, 
+                  question_id: questionId,
+                  user_id: userId,
+                  _token: "{{ csrf_token() }}" },
+                function(data, status) {
+                    console.log(data.downvote);
+                    $('#downvote-count').text('');
+                    $('#downvote-count').text( data.downvote );
+                });
+        });
 
     </script>
 @endsection

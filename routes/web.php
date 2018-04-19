@@ -41,6 +41,8 @@ Route::post('/create', 'QuestionController@create');
 
 Route::post('/question/upvote', 'QuestionController@upvote');
 
+Route::post('/question/downvote', 'QuestionController@downvote');
+
 Route::post('/question/{id}/edit', 'QuestionController@edit');
 
 Route::post('/question/{id}/answer', 'AnswerController@create');

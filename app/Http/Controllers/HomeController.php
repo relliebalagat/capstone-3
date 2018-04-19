@@ -32,6 +32,7 @@ class HomeController extends Controller
         $question_count = Question::where('user_id', Auth::user()->id)->count();
         $followers_count = Auth::user()->followers()->count();
         $following_count = Auth::user()->following()->count();
-        return view('home', compact('all_questions', 'random_users', 'question_count', 'followers_count', 'following_count'));
+        $answer_count = Auth::user()->answer()->count();
+        return view('home', compact('all_questions', 'random_users', 'question_count', 'followers_count', 'following_count', 'answer_count'));
     }
 }

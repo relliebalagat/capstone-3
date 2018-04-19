@@ -18,6 +18,7 @@
                         <li><a href="profile/{{ Auth::user()->id }}">Questions </a><span>{{ $question_count }}</span></li>
                         <li><a href="/followers/{{ Auth::user()->username }}">Followers </a><span>{{ $followers_count }}</span></li>
                         <li><a href="/following">Following </a><span>{{ $following_count }}</span></li>
+                        <li><a href="/following">Answers </a><span>{{ $answer_count }}</span></li>
                     </ol>
                 </div>
             </div>
@@ -50,7 +51,7 @@
                                     <ul class="question-details">
                                         <li class="col-md-4">
                                             <div class="display-block">
-                                                <p class="light-weight">0</p>
+                                                <p class="light-weight">{{ $question->answer->count() }}</p>
                                                 <p><a href="#"><i class="far fa-comments"></i></a></p>
                                             </div>
                                         </li>

@@ -45,7 +45,7 @@
                         @endif
                     @endforeach
                 @else
-                    <h4 class="text-center">You have {{ $following_count }} followers</h4>
+                    <h4 class="text-center">You have {{ $following_count }} following</h4>
                 @endif
 
                 @foreach($list as $following)
@@ -65,11 +65,8 @@
                     </div>
                 @endforeach
                 
-                
             </div>
         </div>
     </div>
-
-
 
 @endsection

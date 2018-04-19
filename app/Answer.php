@@ -7,7 +7,7 @@ use App\User;
 
 class Answer extends Model
 {
-    function user()
+    public function user()
     {
     	return $this->belongsTo('App\User');
     }

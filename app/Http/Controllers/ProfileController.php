@@ -23,7 +23,7 @@ class ProfileController extends Controller
         $random_users = User::orderByRaw('RAND()')->take(3)->get();
         
         $followers_count = $users->followers()->count();
-        $question_count = Question::where('user_id', Auth::user()->id)->count();
+        $question_count = Question::where('user_id', $users->id)->count();
 
         $is_add_question = false;
         $is_following = false;

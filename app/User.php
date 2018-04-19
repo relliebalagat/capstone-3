@@ -27,14 +27,24 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    function question()
+    public function question()
     {
         return $this->belongsTo('App\User');
+    }
+
+    public function answer()
+    {
+        return $this->hasMany('App\Answer');
     }
 
     public function upvote()
     {
         return $this->belongsToMany('App\Question', 'upvote_user', 'user_id', 'question_id')->withTimestamps();
+    }
+
+    public function downvote()
+    {
+        return $this->belongsToMany('App\Question', 'downvote_user', 'user_id', 'question_id')->withTimestamps();
     }
 
     public function following()

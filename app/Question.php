@@ -24,5 +24,4 @@ class Question extends Model
     {
         return $this->belongsTo('App\Category');
     }
-
 }
